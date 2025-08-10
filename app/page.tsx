@@ -609,7 +609,7 @@ export default function MedicalLearningPlatform() {
         {/* วิดีโอแนะนำ */}
         <div className="w-full aspect-video"> 
               <video width="100%" height="auto"  autoPlay muted loop playsInline>
-                <source src="/videos/cpr.MP4" type="video/mp4" />
+                <source src="/videos/cpr.MP4" type="video/mp4" controls />
                 Your browser does not support the video tag.
               </video>  
         </div>
