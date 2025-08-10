@@ -77,58 +77,86 @@ export default function MedicalLearningPlatform() {
     { term: "Half-life", definition: "ระยะเวลาที่ระดับยาในกระแสเลือดลดลงครึ่งหนึ่ง" },
   ];
 
-  const lessons = [
+  const slugs = [
   {
-    title: "ยาต้านการอักเสบ (NSAIDs)",
-    slug: "nsaids",
+    id: "nsaid",
+    title: "ยาต้านการอักเสบ (NSAIDs)",  
+    summary: "ยากลุ่ม NSAIDs ยับยั้ง COX enzyme ลดการสร้าง prostaglandin ที่ทำให้เกิดการอักเสบ",
     image: "/images/nsaids.jpg",
-    summary: "ยากลุ่ม NSAIDs ยับยั้ง COX enzyme ลดการสร้าง prostaglandin ที่ทำให้เกิดการอักเสบ"
+    href: "/nsaid",
   },
   {
-    title: "ยาลดไข้ (Antipyretics)",
-    slug: "antipyretics",
+    id: "antipry",
+    title: "ยาลดไข้ (Antipyretics)",  
+    summary: "ยาลดไข้ทำงานผ่าน hypothalamus โดยลดระดับ PGE2 เพื่อลดอุณหภูมิร่างกาย",
     image: "/images/antipry.jpg",
-    summary: "ยาลดไข้ทำงานผ่าน hypothalamus โดยลดระดับ PGE2 เพื่อลดอุณหภูมิร่างกาย"
+    href: "/antipry",
   },
   {
-    title: "กลไกดูดซึมยา",
-    slug: "absorption",
+    id: "dudsem",
+    title: "กลไกดูดซึมยา",  
+    summary: "ยาส่วนใหญ่ดูดซึมผ่านลำไส้เล็ก โดยใช้ passive หรือ active transport",
     image: "/images/konkai.jpg",
-    summary: "ยาส่วนใหญ่ดูดซึมผ่านลำไส้เล็ก โดยใช้ passive หรือ active transport"
+    href: "/dudsem",
+  },
+  {
+    id: "antibiotic",
+    title: "ยาปฏิชีวนะ (Antibiotic)",  
+    summary: "ยาส่วนใหญ่ดูดซึมผ่านลำไส้เล็ก โดยใช้ passive หรือ active transport",
+    image: "/images/antibiotics.jpg",
+    href: "/antibiotic",
+  },
+  {
+    id: "half-life",
+    title: "Half-Life",  
+    summary: "ยาส่วนใหญ่ดูดซึมผ่านลำไส้เล็ก โดยใช้ passive หรือ active transport",
+    image: "/images/half_life.jpg",
+    href: "/half-life",
   }
-  
   ];
 
   const skills = [
   {
+    id: "pulse",
     title: "การวัดชีพจร",
     description: "เรียนรู้วิธีจับชีพจรอย่างถูกต้องตามหลักการแพทย์",
     image: "/images/pulse.jpg",
+    href: "/pulse",
   },
   {
+    id: "cpr",
     title: "การทำ CPR",
     description: "เรียนรู้การช่วยชีวิตเบื้องต้น และใช้เครื่อง AED",
     image: "/images/make_cpr.jpg",
+    href: "/cpr",
   },
   {
+    id: "wound",
     title: "การทำแผลเบื้องต้น",
     description: "เรียนรู้ขั้นตอนล้างแผล ห้ามเลือด และพันแผลอย่างถูกวิธี",
     image: "/images/wound.jpg",
+    href: "/wound",
   },
   {
+    id: "saline",
     title: "การใส่สายให้น้ำเกลือ",
     description: "ขั้นตอนการเตรียมอุปกรณ์ และใส่ IV เบื้องต้น",
     image: "/images/saline.jpg",
+    href: "/saline",
   },
   {
+    id: "kradook",
     title: "การดามกระดูกหัก",
     description: "ขั้นตอนการเตรียมอุปกรณ์ และการประคบเย็น",
     image: "/images/dam_kradook.jpg",
+    href: "/kradook",
   },
   {
+    id: "penlom ",
     title: "อาการช็อก / หน้ามืด / ลมหมดสติ",
     description: "เรียนรู้ขั้นตอนการนอนของผู้ป่วย ",
     image: "/images/penlom.jpg",
+    href: "/penlom",
   },
   ];
 
@@ -189,7 +217,136 @@ export default function MedicalLearningPlatform() {
     color: "bg-pink-100 text-pink-700",
     href: "/reproductive",
   },
-]
+  ]
+
+  const pharmacyTerms = [
+  {
+    term: "NSAIDs (เอ็นเสดส์)",
+    fullEnglish: "Non-Steroidal Anti-Inflammatory Drugs",
+    meaning: "ยาต้านการอักเสบที่ไม่ใช่สเตียรอยด์ เช่น ibuprofen, diclofenac",
+    image: "/images/vocab/ibuprofen.jpg",
+  },
+  {
+    term: "Antipyretics (แอนทิไป-เรทิกส์)",
+    fullEnglish: "Anti-pyretic drugs",
+    meaning: "ยาลดไข้ เช่น paracetamol",
+   image: "/images/vocab/antipy.jpg",
+  },
+  {
+    term: "Analgesics (แอน-แนล-จี-ซิกส์)",
+    fullEnglish: "Pain relievers / Analgesic drugs",
+    meaning: "ยาแก้ปวด เช่น paracetamol, morphine",
+    image: "/images/vocab/analgesics.jpg",
+  },
+  {
+    term: "Antibiotics (แอน-ไท-ไบ-ออ-ติกส์)",
+    fullEnglish: "Anti-bacterial drugs",
+    meaning: "ยาฆ่าเชื้อแบคทีเรีย เช่น amoxicillin",
+   image: "/images/vocab/antibiotics.jpg",
+  },
+  {
+    term: "Antacids (แอน-แทส-ซิดส์)",
+    fullEnglish: "Anti-acid drugs",
+    meaning: "ยาลดกรด เช่น aluminum hydroxide",
+    image: "/images/vocab/antacids.jpg",
+  },
+  {
+    term: "Antihistamines (แอน-ที-ฮิส-ทะ-มีนส์)",
+    fullEnglish: "Anti-histamine drugs",
+    meaning: "ยาแก้แพ้ เช่น loratadine, cetirizine",
+    image: "/images/vocab/antihistamines.jpg",
+  },
+  {
+    term: "Antiemetics (แอน-ที-อี-เม-ติกส์)",
+    fullEnglish: "Anti-vomiting drugs",
+    meaning: "ยาแก้อาเจียน เช่น metoclopramide",
+   image: "/images/vocab/antiemetics.jpg",
+  },
+  {
+    term: "Sedatives (เซ-ดา-ทีฟส์)",
+    fullEnglish: "Sedative drugs",
+    meaning: "ยากล่อมประสาท เช่น diazepam",
+    image: "/images/vocab/sedatives.jpg",
+  },
+  {
+    term: "Antiseptics (แอน-ที-เซพ-ติกส์)",
+    fullEnglish: "Germ-killing solutions",
+    meaning: "ยาฆ่าเชื้อโรคภายนอก เช่น povidone iodine",
+    image: "/images/vocab/antiseptics.jpg",
+  },
+  {
+    term: "Corticosteroids (คอร์-ติ-โค-สเตีย-รอยด์)",
+    fullEnglish: "Steroid-type anti-inflammatory drugs",
+    meaning: "ยาสเตียรอยด์ เช่น prednisolone",
+    image: "/images/vocab/corticos.jpg",
+  },
+  {
+    term: "Anticoagulants (แอน-ที-โค-แอก-กิว-แลนต์ส)",
+    fullEnglish: "Blood thinners",
+    meaning: "ยาต้านการแข็งตัวของเลือด เช่น warfarin, heparin",
+    image: "/images/vocab/heparin.jpg",
+  },
+  {
+    term: "Diuretics (ได-ยู-เร-ติกส์)",
+    fullEnglish: "Water pills / Diuretic drugs",
+    meaning: "ยาขับปัสสาวะ เช่น furosemide",
+    image: "/images/vocab/furo.png",
+  },
+  {
+    term: "Bronchodilators (บรอน-โค-ได-เล-เทอร์ส)",
+    fullEnglish: "Airway-widening drugs",
+    meaning: "ยาขยายหลอดลม เช่น salbutamol",
+    image: "/images/vocab/salbutamol.jpg",
+  },
+  {
+    term: "Vasodilators (เว-โซ-ได-เล-เทอร์ส)",
+    fullEnglish: "Blood vessel-widening drugs",
+    meaning: "ยาขยายหลอดเลือด เช่น nitroglycerin",
+    image: "/images/vocab/nitrogly.jpg",
+  },
+  {
+    term: "Antidepressants (แอน-ที-ดี-เพรส-แซนต์ส)",
+    fullEnglish: "Anti-depression drugs",
+    meaning: "ยาต้านซึมเศร้า เช่น fluoxetine",
+    image: "/images/vocab/fluoxetine.jpg",
+  },
+  {
+    term: "Antipsychotics (แอน-ที-ไซ-คอ-ติกส์)",
+    fullEnglish: "Anti-psychosis drugs",
+    meaning: "ยารักษาโรคจิต เช่น haloperidol",
+    image: "/images/vocab/haloperidol.jpg",
+  },
+  {
+    term: "Ointment (ออยท์-เมนต์)",
+    fullEnglish: "",
+    meaning: "ยาขี้ผึ้ง ใช้ทาภายนอก บำรุงหรือรักษาแผลผิวหนัง",
+   image: "/images/vocab/kipeng.jpg",
+  },
+  {
+    term: "Syrup (ซี-รัป)",
+    fullEnglish: "",
+    meaning: "ยาน้ำเชื่อม ยารูปแบบน้ำ หวาน กินง่ายโดยเฉพาะในเด็ก",
+    image: "/images/vocab/syrup.jpg",
+  },
+  {
+    term: "Suspension (ซัส-เพน-ชัน)",
+    fullEnglish: "",
+    meaning: "ยาน้ำแขวนตะกอน ต้องเขย่าก่อนใช้ เช่น ยาแก้ท้องเสียเด็ก",
+   image: "/images/vocab/suspension.jpg",
+  },
+  {
+    term: "Tablet (แท็บ-เลต)",
+    fullEnglish: "",
+    meaning: "ยาเม็ด รูปแบบยากินที่พบบ่อย",
+    image: "/images/vocab/tablet.jpg",
+  },
+  {
+    term: "Capsule (แคป-ซูล)",
+    fullEnglish: "",
+    meaning: "ยาที่บรรจุในปลอกเจลาติน กินง่าย",
+    image: "/images/vocab/capsule.jpg",
+  },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -459,7 +616,7 @@ export default function MedicalLearningPlatform() {
       </section>
 
       {/* การ์ดทักษะเบื้องต้น */}
-      <section id="" className="bg-white py-16">
+      <section id="skill" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10 text-center">
             ตัวอย่างทักษะต่างๆ
@@ -480,7 +637,14 @@ export default function MedicalLearningPlatform() {
                     {skill.title}
                   </h3>
                   <p className="text-gray-600 text-sm">{skill.description}</p>
-                </div>
+                </div> 
+                    <div className="text-center mb-4">
+                      <Link key={skill.id} href={skill.href}>
+                        <span className="text-sm text-blue-600 font-medium hover:text-blue-800 cursor-pointer">
+                          เรียนรู้เพิ่มเติม →
+                        </span>
+                      </Link>
+                    </div>
               </div>
             ))}
           </div>
@@ -489,88 +653,89 @@ export default function MedicalLearningPlatform() {
     </main>
 
       {/* หลักการออกฤทธิ์ของยา */}
-      <section id="slug" className="py-16 px-4 bg-white">
-        <main className="max-w-5xl mx-auto px-4 py-10">
-          <h1 className="text-3xl font-bold mb-8 text-center ">หลักการออกฤทธิ์ของยา</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {lessons.map((lesson) => (
-              <Link
-                key={lesson.slug}
-                href={""}
-                className="border rounded-lg overflow-hidden hover:shadow-lg transition"
+      <section id="slug" className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-10 text-center">
+            หลักการออกฤทธิ์ของยา
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {slugs.map((slug, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-md transition"
               >
-                <img src={lesson.image} alt={lesson.title} className="h-48 w-full object-cover" />
+                <img
+                  src={slug.image}
+                  alt={slug.title}
+                  className="w-full h-48 object-cover"
+                />
                 <div className="p-4">
-                  <h2 className="text-xl font-semibold">{lesson.title}</h2>
-                  <p className="text-gray-600 mt-2">{lesson.summary}</p>
-                </div>
-              </Link>
+                  <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                    {slug.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{slug.summary}</p>
+                </div> 
+                    <div className="text-center mb-4">
+                      <Link key={slug.id} href={slug.href}>
+                        <span className="text-sm text-blue-600 font-medium hover:text-blue-800 cursor-pointer">
+                          เรียนรู้เพิ่มเติม →
+                        </span>
+                      </Link>
+                    </div>
+              </div>
             ))}
           </div>
-        </main>
+        </div>
       </section>
 
       {/* คำศัพท์เภสัช */}
-      <h1 id="vocab" className="text-3xl font-bold mb-8 text-center mt-6">คำศัพท์เภสัชเบื้องต้น</h1>
-      <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left: Image */}
-        <div className="w-full md:ml-20">
-          <Image
-            src="/images/saids.jpg"
-            alt="Science of Improvement"
-            width={500}
-            height={200}
-            className="w-full max-w-[300px] md:max-w-[400px] h-auto rounded-lg shadow-lg mx-auto"
-          />
+    <section className="w-full py-8 md:py-12 lg:py-16 bg-gray-50 dark:bg-gray-900">
+      <div className="container px-4 md:px-6">
+        <h1 className="text-xl font-bold tracking-tight text-center mb-8 md:text-2xl lg:text-3xl">
+          คำศัพท์เภสัชเบื้องต้น (Basic Pharmacy Terms)
+        </h1>
+
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+          {pharmacyTerms.map((term, index) => (
+            <Card key={index} className="flex flex-col overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <div className="relative w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                <Image
+                  src={term.image}
+                  alt={term.term}
+                  width={300}
+                  height={192}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <CardContent className="p-4 flex-grow">
+                <h2 className="text-lg font-semibold mb-1 text-primary">{term.term}</h2>
+                {term.fullEnglish && (
+                  <p className="text-sm text-muted-foreground mb-2 italic">
+                    {term.fullEnglish}
+                  </p>
+                )}
+                <p className="text-sm text-gray-700 dark:text-gray-300">
+                  {term.meaning}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
-        {/* Right: Text content */}
-        <div className="text-center md:text-left">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">NSAIDs</h2>
-          <p className="text-gray-600 text-lg">Non-Steroidal Anti-Inflammatory Drugs</p>
-          <p className="text-gray-600">ยาต้านอักเสบที่ไม่ใช่สเตียรอยด์</p>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left: Text */}
-        <div className="text-center md:text-right md:pr-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Antibiotics</h2>
-          <p className="text-gray-600 text-lg">ยาฆ่าเชื้อแบคทีเรีย</p>
-        </div>
-
-        {/* Right: Image */}
-        <div className="w-full md:mr-20">
-          <Image
-            src="/images/antipry.jpg"
-            alt="Science of Improvement"
-            width={500}
-            height={200}
-            className="w-full max-w-[300px] md:max-w-[400px] h-auto rounded-lg shadow-lg mx-auto"
-          />
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left: Image */}
-        <div className="w-full md:ml-20">
-          <Image
-            src="/images/half_life.jpg"
-            alt="Science of Improvement"
-            width={500}
-            height={200}
-            className="w-full max-w-[300px] md:max-w-[400px] h-auto rounded-lg shadow-lg mx-auto"
-          />
-        </div>
-
-        {/* Right: Text */}
-        <div className="text-center md:text-left">
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">Half-life</h2>
-          <p className="text-gray-600 text-lg">
-            ระยะเวลาที่ระดับยาในกระแสเลือดลดลงครึ่งหนึ่ง
-          </p>
-        </div>
-      </section>
+        <Card className="mt-12 p-6 bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 shadow-sm">
+          <CardHeader className="p-0 mb-4">
+            <CardTitle className="text-xl font-bold text-blue-700 dark:text-blue-300">
+              📌 เคล็ดลับในการจำคำศัพท์เรื่องยาและการออกฤทธิ์ของยาแต่ละชนิด:
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-0">
+            <p className="text-base text-blue-800 dark:text-blue-200">
+              {'“ศัพท์ยาส่วนใหญ่ลงท้ายด้วย -ics / -ines / -ants / -oids แปลว่ายานั้นทำหน้าที่ต่อต้านหรือส่งผลต่อสิ่งใดสิ่งหนึ่ง”'}
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
 
 
       {/* ติดตามข่าวสารและเนื้อหาใหม่ */}
@@ -609,12 +774,12 @@ export default function MedicalLearningPlatform() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link href="#" className="hover:text-white">
-                    กายวิภาคศาสตร์
+                   หลักการออกฤทธิ์ของยา
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    สรีรวิทยา
+                    คำศัพท์เภสัชเบื้องต้น
                   </Link>
                 </li>
                 <li>
@@ -624,7 +789,22 @@ export default function MedicalLearningPlatform() {
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    การตรวจร่างกาย
+                    การตรวจร่างกาย  
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    กายวิภาคศาสตร์ 
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    สรีรวิทยา 
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    ทักษะทางแพทย์ 
                   </Link>
                 </li>
               </ul>
@@ -659,9 +839,20 @@ export default function MedicalLearningPlatform() {
             <div>
               <h4 className="font-semibold mb-4">ติดต่อเรา</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>อีเมล: info@medlearn.th</li>
-                <li>โทร: 02-xxx-xxxx</li>
-                <li>ที่อยู่: กรุงเทพมหานคร</li>
+                <li>อีเมล : santawisuk511@gmail.com
+                          <p className="ml-10"> : Chaiyapol210151@gmail.com</p>
+                          <p className="ml-10">: bigccubon1256@gmail.com</p>
+                </li> 
+                <li>Line : santawisuk2550
+                          <p className="ml-10"> : Chaiyapol2551</p>
+                          <p className="ml-10"> : cckomiauto</p>
+                </li>
+                <li>Facebook  : Sutthawat santawisuk
+                          <p className="ml-10"> : Chaiyapol Mingkhwan</p>
+                          <p className="ml-10"> : Natthaphat Chanloet</p>
+                </li>
+                <li>โทร : 0821318166</li>
+                <li>ที่อยู่ : อุบลราชธานี</li>
               </ul>
             </div>
           </div>

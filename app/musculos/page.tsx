@@ -409,89 +409,115 @@ export default function MedicalLearningPlatform() {
         </div>
  
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-blue-600 p-2 rounded-lg">
-                  <Stethoscope className="h-6 w-6 text-white" />
+      <footer id="about" className="bg-gray-800 text-white py-12 px-4">
+              <div className="container mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                  <div>
+                    <div className="flex items-center space-x-2 mb-4">
+                      <div className="bg-blue-600 p-2 rounded-lg">
+                        <Stethoscope className="h-6 w-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold">MedLearn Thailand</h3>
+                        <p className="text-sm text-gray-400">แพลตฟอร์มเรียนรู้ทางการแพทย์</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-400">แพลตฟอร์มการเรียนรู้ออนไลน์ที่ครอบคลุมเรื่องกายวิภาคศาสตร์และทักษะทางการแพทย์</p>
+                  </div>
+      
+                  <div>
+                    <h4 className="font-semibold mb-4">หลักสูตร</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                         หลักการออกฤทธิ์ของยา
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          คำศัพท์เภสัชเบื้องต้น
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          ทักษะทางแพทย์
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          การตรวจร่างกาย  
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white"> 
+                          กายวิภาคศาสตร์ 
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white"> 
+                          สรีรวิทยา 
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white"> 
+                          ทักษะทางแพทย์ 
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div>
+                    <h4 className="font-semibold mb-4">ระบบร่างกาย</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          ระบบหัวใจและหลอดเลือด
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          ระบบประสาท
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          ระบบทางเดินหายใจ
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="#" className="hover:text-white">
+                          ระบบกระดูกและกล้ามเนื้อ
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+      
+                  <div>
+                    <h4 className="font-semibold mb-4">ติดต่อเรา</h4>
+                    <ul className="space-y-2 text-gray-400">
+                      <li>อีเมล : santawisuk511@gmail.com
+                                <p className="ml-10"> : Chaiyapol210151@gmail.com</p>
+                                <p className="ml-10">: bigccubon1256@gmail.com</p>
+                      </li> 
+                      <li>Line : santawisuk2550
+                                <p className="ml-10"> : Chaiyapol2551</p>
+                                <p className="ml-10"> : cckomiauto</p>
+                      </li>
+                      <li>Facebook  : Sutthawat santawisuk
+                                <p className="ml-10"> : Chaiyapol Mingkhwan</p>
+                                <p className="ml-10"> : Natthaphat Chanloet</p>
+                      </li>
+                      <li>โทร : 0821318166</li>
+                      <li>ที่อยู่ : อุบลราชธานี</li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold">MedLearn Thailand</h3>
-                  <p className="text-sm text-gray-400">แพลตฟอร์มเรียนรู้ทางการแพทย์</p>
+      
+                <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                  <p>&copy; 2024 MedLearn Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
                 </div>
               </div>
-              <p className="text-gray-400">แพลตฟอร์มการเรียนรู้ออนไลน์ที่ครอบคลุมเรื่องกายวิภาคศาสตร์และทักษะทางการแพทย์</p>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">หลักสูตร</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    กายวิภาคศาสตร์
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    สรีรวิทยา
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    ทักษะทางแพทย์
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    การตรวจร่างกาย
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">ระบบร่างกาย</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    ระบบหัวใจและหลอดเลือด
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    ระบบประสาท
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    ระบบทางเดินหายใจ
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-white">
-                    ระบบกระดูกและกล้ามเนื้อ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">ติดต่อเรา</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>อีเมล: info@medlearn.th</li>
-                <li>โทร: 02-xxx-xxxx</li>
-                <li>ที่อยู่: กรุงเทพมหานคร</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 MedLearn Thailand. สงวนลิขสิทธิ์ทุกประการ</p>
-          </div>
-        </div>
-      </footer>
+            </footer>
     </div>
   )
 }

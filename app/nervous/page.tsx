@@ -297,7 +297,7 @@ export default function MedicalLearningPlatform() {
         </div>
  
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12 px-4">
+      <footer id="about" className="bg-gray-800 text-white py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -318,12 +318,12 @@ export default function MedicalLearningPlatform() {
               <ul className="space-y-2 text-gray-400">
                 <li>
                   <Link href="#" className="hover:text-white">
-                    กายวิภาคศาสตร์
+                   หลักการออกฤทธิ์ของยา
                   </Link>
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    สรีรวิทยา
+                    คำศัพท์เภสัชเบื้องต้น
                   </Link>
                 </li>
                 <li>
@@ -333,7 +333,22 @@ export default function MedicalLearningPlatform() {
                 </li>
                 <li>
                   <Link href="#" className="hover:text-white">
-                    การตรวจร่างกาย
+                    การตรวจร่างกาย  
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    กายวิภาคศาสตร์ 
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    สรีรวิทยา 
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:text-white"> 
+                    ทักษะทางแพทย์ 
                   </Link>
                 </li>
               </ul>
@@ -368,9 +383,20 @@ export default function MedicalLearningPlatform() {
             <div>
               <h4 className="font-semibold mb-4">ติดต่อเรา</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>อีเมล: info@medlearn.th</li>
-                <li>โทร: 02-xxx-xxxx</li>
-                <li>ที่อยู่: กรุงเทพมหานคร</li>
+                <li>อีเมล : santawisuk511@gmail.com
+                          <p className="ml-10"> : Chaiyapol210151@gmail.com</p>
+                          <p className="ml-10">: bigccubon1256@gmail.com</p>
+                </li> 
+                <li>Line : santawisuk2550
+                          <p className="ml-10"> : Chaiyapol2551</p>
+                          <p className="ml-10"> : cckomiauto</p>
+                </li>
+                <li>Facebook  : Sutthawat santawisuk
+                          <p className="ml-10"> : Chaiyapol Mingkhwan</p>
+                          <p className="ml-10"> : Natthaphat Chanloet</p>
+                </li>
+                <li>โทร : 0821318166</li>
+                <li>ที่อยู่ : อุบลราชธานี</li>
               </ul>
             </div>
           </div>
